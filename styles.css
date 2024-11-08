@@ -1,0 +1,185 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.sticky-form {
+    position: sticky;
+    top: 20px;
+}
+
+.story-card {
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.story-card h3 {
+    color: #1a73e8;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.story-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.story-actions button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.story-actions .btn-warning {
+    background-color: #ffd700;
+    border: none;
+    color: #000;
+}
+
+.story-actions .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.story-actions button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 15px 20px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.stories-container {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.stories-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.stories-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.stories-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.stories-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .sticky-form {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+.toast-container {
+    z-index: 1050;
+}
+
+.toast {
+    opacity: 1 !important;
+}
+
+/* Add these to your existing styles */
+#dogImage {
+    max-height: 300px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+#dogImage:hover {
+    transform: scale(1.05);
+}
+
+#fetchDogBtn {
+    transition: all 0.3s ease;
+}
+
+#fetchDogBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#dogCard {
+    margin-top: 20px;
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
